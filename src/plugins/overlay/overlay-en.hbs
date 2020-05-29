@@ -22,6 +22,30 @@
 <section>
 	<h2>Examples</h2>
 	<ul>
+
+	<li>
+	<p><a href="#invitation-popup" aria-controls="invitation-popup" class="overlay-lnk" role="button">Invitation-popup</a></p>
+	<details class="mrgn-bttm-lg">
+		<summary>View code</summary>
+		<pre><code>&lt;p&gt;&lt;a href=&quot;#invitation-popup&quot; aria-controls=&quot;invitation-popup&quot; class=&quot;wb-im-popup&quot; role=&quot;button&quot;&gt;Invitation-popup&lt;/a&gt;&lt;/p&gt;
+&lt;aside id=&quot;gc-im-popup&quot; class=&quot;wb-overlay wb-overlay-im modal-content-im overlay-def wb-popup-im&quot;&gt;
+	&lt;header class=&quot;modal-header&quot;&gt;
+		&lt;h2 class=&quot;modal-title&quot;&gt; im-popup&lt;/h2&gt;
+		&lt;button id=&quot;survey-close&quot; class=&quotmfp-close&quot title=&quot;close&quot; &gt;&amp;times;&lt;span class=&quot;wb-inv&quot;&gt; close &lt;/span&gt;&lt;/button&gt;
+	&lt;/header&gt;
+	&lt;div class=&quot;modal-body&quot;&gt;
+		...
+	&lt;ul class=&quot;list-inline mrgn-bttm-0&quot;&gt;&lt;li class=&quot;mrgn-tp-md&quot;&gt;&lt;a id=&quot;survey-yes&quot; class=&quot;btn btn-primary&quot; href=&quot;#survey-link&quot; target=&quot;_blank&quot;&gt; Yes &lt;/a&gt;&lt;/li&gt;
+		&lt;li class=&quot;mrgn-tp-md&quot;&gt;&lt;button id=&quot;survey-no&quot; class=&quot;btn btn-default&quot;&gt; No &lt;/button&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class&quot;modal-footer  hidden&quot;&gt;&lt;/div&gt;
+&lt;/aside&gt;
+			</code>
+		</pre>
+	</details>
+</li>
+
 		<li>
 			<p><a href="#left-panel" aria-controls="left-panel" class="overlay-lnk" role="button">Left-panel</a></p>
 			<details class="mrgn-bttm-lg">
@@ -169,7 +193,6 @@
 		<p>Overlays can be opened through JavaScript with:</p>
 		<pre><code>$( "#overlayId" ).trigger( "open.wb-overlaylbx" );</code></pre>
 		<p>For an example of opening Lightbox popups through JavaScript, see <a href="../lightbox/lightbox-en.html#examples5">Opening popups through JavaScript</a>.</p>
-
 		<label for="overlay-select">Overlay to open</label>
 		<select id="overlay-select">
 			<option value="left-panel">Left panel</option>
@@ -251,6 +274,27 @@ wb.doc.on( "click vclick", "#overlay-open-btn", function( event ) {
 		</details>
 	</section>
 </section>
+
+
+<aside id="invitation-popup" class="wb-overlay wb-overlay-im modal-content-im overlay-def wb-popup-im">
+	<header class="modal-header">
+		<h2 class="modal-title">Invitation-popup</h2>
+		<button type="button" id="survey-close" class="mfp-close" title="close" >&times;<span class="wb-inv"> close</span></button>
+	</header>
+	<div class="modal-body">
+		<ul class="list-unstyled">
+			<li><a href="#">Link 1</a></li>
+			<li><a href="#">Link 2</a></li>
+			<li><a href="#">Link 3</a></li>
+		</ul>
+		<ul class="list-inline mrgn-bttm-0">
+			<li class="mrgn-tp-md"><a id="survey-yes" class="btn btn-primary" href="https://www.statcan.gc.ca/eng/survey/faq" target="_blank" onClick="window.location.reload();">Yes</a></li>
+			<li class="mrgn-tp-md"><button type="button" id="survey-no" class="btn btn-default survey-close" onClick="window.location.reload();">No</button></li>
+
+		</ul>
+	</div>
+	<div class="modal-footer  hidden"> </div>
+</aside>
 
 <section id="left-panel" class="wb-overlay modal-content overlay-def wb-panel-l">
 	<header class="modal-header">

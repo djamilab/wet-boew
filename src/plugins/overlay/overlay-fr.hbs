@@ -23,6 +23,29 @@
 	<h2>Exemples</h2>
 	<ul>
 		<li>
+			<p><a href="#panneau-invitation" aria-controls="panneau-invitation" class="overlay-lnk" role="button">Panneau invitation</a></p>
+			<details class="mrgn-bttm-lg">
+			<summary>Visualiser le code</summary>
+				<pre><code>&lt;p&gt;&lt;a href=&quot;#panneau-invitation&quot; aria-controls=&quot;panneau-invitation&quot; class=&quot;wb-im-popup&quot; role=&quot;button&quot;&gt;Panneau invitation&lt;/a&gt;&lt;/p&gt;
+&lt;aside id=&quot;gc-im-popup&quot; class=&quot;wb-overlay wb-overlay-im modal-content-im overlay-def wb-popup-im&quot;&gt;
+	&lt;header class=&quot;modal-header&quot;&gt;
+		&lt;h2 class=&quot;modal-title&quot;&gt; Panneau invitation&lt;/h2&gt;
+		&lt;button id=&quot;survey-close&quot; class=&quotmfp-close&quot title=&quot;close&quot; &gt;&amp;times;&lt;span class=&quot;wb-inv&quot;&gt; fernmer &lt;/span&gt;&lt;/button&gt;
+	&lt;/header&gt;
+	&lt;div class=&quot;modal-body&quot;&gt;
+		...
+	&lt;ul class=&quot;list-inline mrgn-bttm-0&quot;&gt;&lt;li class=&quot;mrgn-tp-md&quot;&gt;&lt;a id=&quot;survey-yes&quot; class=&quot;btn btn-primary&quot; href=&quot;#lien-de-survey&quot; target=&quot;_blank&quot;&gt; Oui &lt;/a&gt;&lt;/li&gt;
+		&lt;li class=&quot;mrgn-tp-md&quot;&gt;&lt;button id=&quot;survey-no&quot; class=&quot;btn btn-default&quot;&gt; Non &lt;/button&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class&quot;modal-footer  hidden&quot;&gt;&lt;/div&gt;
+&lt;/aside&gt;
+			</code>
+		</pre>
+	</details>
+</li>
+
+		<li>
 			<p><a href="#panneau-gauche" aria-controls="panneau-gauche" class="overlay-lnk" role="button">Panneau à gauche</a></p>
 			<details class="mrgn-bttm-lg">
 				<summary>Visualiser le code</summary>
@@ -254,6 +277,26 @@ wb.doc.on( "click vclick", "#overlay-open-btn", function( event ) {
 		</details>
 	</section>
 </section>
+
+<aside id="panneau-invitation" class="wb-overlay wb-overlay-im modal-content-im overlay-def wb-popup-im">
+	<header class="modal-header">
+		<h2 class="modal-title">Panneau invitation</h2>
+		<button type="button" id="survey-close" class="mfp-close" title="close" >&times;<span class="wb-inv"> fermer</span></button>
+	</header>
+	<div class="modal-body">
+		<ul class="list-unstyled">
+			<li><a href="#">Lien 1</a></li>
+			<li><a href="#">Lien 2</a></li>
+			<li><a href="#">Lien 3</a></li>
+		</ul>
+		<ul class="list-inline mrgn-bttm-0">
+			<li class="mrgn-tp-md"><a id="survey-yes" class="btn btn-primary" href="https://www.statcan.gc.ca/fra/enquete/qsp" target="_blank" onClick="window.location.reload();">Oui</a></li>
+			<li class="mrgn-tp-md"><button type="button" id="survey-no" class="btn btn-default survey-close" onClick="window.location.reload();">Non</button></li>
+
+		</ul>
+	</div>
+	<div class="modal-footer  hidden"> </div>
+</aside>
 
 <section id="panneau-gauche" class="wb-overlay modal-content overlay-def wb-panel-l">
 	<header class="modal-header">

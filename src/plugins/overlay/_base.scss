@@ -150,6 +150,25 @@
 	}
 }
 
+
+/*
+ * im popup style
+ */
+.wb-popup-im {
+	border-radius: 6px;
+	bottom: 5%;
+	left: auto;
+	margin: 0 25px;
+	right: 0;
+	top: auto;
+	width: 35%;
+	
+	border-color: #F0F0F0;
+    border-style: outset; 
+    border-width: 2px;
+}
+
+
 [dir=rtl] {
 	.mfp-close {
 		left: 0;
